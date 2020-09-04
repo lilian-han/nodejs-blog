@@ -45,11 +45,9 @@ const handleBlogRouter = (req, res) => {
     // const data = getDetail(id)
     // return new SuccessModel(data)
     const result = getDetail(id)
-    if (result) {
-      return result.then((data) => {
-        return new SuccessModel(data)
-      })
-    }
+    return result.then((data) => {
+      return new SuccessModel(data)
+    })
   }
 
   // 新建博客
